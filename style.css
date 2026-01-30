@@ -189,6 +189,7 @@ body {
 }
 
 .hero-image {
+    padding-top: 20px;
   width: 100%;
 }
 
@@ -197,6 +198,7 @@ body {
   height: auto;        /* auto height = no crop */
   display: block;
   object-fit: contain; /* ensures full image is visible */
+  padding-top: 35px;
 }
 
 
@@ -204,5 +206,263 @@ body {
 @media (min-width: 481px) {
     body {
         display: none; /* Hide on desktop */
+    }
+}
+
+
+
+/* Highlights Section Styles - Mobile-First Approach */
+
+/* Section Background */
+.highlights-section {
+    background-color: #000000; /* Pure black background */
+    padding: 20px; /* Padding for mobile spacing */
+    color: #ffffff; /* White text for visibility */
+}
+
+/* Heading Styles */
+.highlights-heading {
+    text-align: center; /* Centered horizontally */
+    font-size: 2rem; /* Responsive font size for mobile */
+    font-weight: bold; /* Bold for modern look */
+    margin-bottom: 20px; /* Space below heading */
+    font-family: Arial, sans-serif; /* Clean, modern font */
+    text-transform: uppercase; /* Uppercase for emphasis */
+}
+
+/* Grid Container for Cards */
+.highlights-grid {
+    display: flex; /* Flexbox for mobile: stack vertically */
+    flex-direction: column; /* Vertical layout on mobile */
+    gap: 20px; /* Gap between cards */
+}
+
+/* Individual Highlight Card */
+.highlight-card {
+    display: flex; /* Flex for image and label layout */
+    flex-direction: column; /* Stack image and label vertically */
+    align-items: center; /* Center content */
+}
+
+/* Image Styles */
+.highlight-image {
+    width: 100%; /* Full width on mobile */
+    max-width: 300px; /* Max width to prevent overflow */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Scale image to cover without distortion */
+    border-radius: 10px; /* Rounded corners, adapts to screen */
+    pointer-events: none; /* Prevent drag, zoom, or interaction */
+    user-select: none; /* Prevent selection */
+}
+
+/* Label Box Below Image */
+.highlight-label {
+    margin-top: 10px; /* Space above label */
+    padding: 12px 80px; /* Padding inside box */
+    background-color: #ffd700; /* Slight transparency */
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Low-opacity border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1rem; /* Clean typography size */
+    font-family: Arial, sans-serif; /* Clean font */
+    text-align: center; /* Center text */
+    /* color: #000000; */
+    font-weight: 600;        /* 👈 makes text bold (try 700 if needed) */
+    color: #000000;          /* 👈 darker than pure black but classy */
+    
+}
+
+/* Desktop Styles - Media Query for Screens 768px and Above */
+@media (min-width: 768px) {
+    .highlights-section {
+        padding: 40px; /* More padding on desktop */
+    }
+
+    .highlights-heading {
+        font-size: 2.5rem; /* Larger font on desktop */
+        margin-bottom: 30px; /* More space below */
+    }
+
+    .highlights-grid {
+        display: grid; /* Switch to CSS Grid for desktop */
+        grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
+        grid-template-rows: auto auto; /* 2 rows (for 8 items) */
+        gap: 20px; /* Gap between grid items */
+    }
+
+    /* .highlight-card { */
+        /* Grid items will auto-arrange */
+    /* } */
+
+    .highlight-image {
+        width: 100%; /* Full width within grid cell */
+        height: 200px; /* Fixed height for uniformity */
+    }
+
+    .highlight-label {
+        font-size: 1.1rem; /* Slightly larger text on desktop */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Footer Styles - Mobile-First Approach */
+
+/* Footer Container */
+.footer {
+    background-color: #000000; /* Deep black background */
+    color: rgba(255, 255, 255, 0.9); /* White text with subtle opacity */
+    padding: 20px; /* Padding for mobile */
+    font-family: Arial, sans-serif; /* Clean, modern font */
+}
+
+/* Footer Content Grid */
+.footer-content {
+    display: flex; /* Flexbox for mobile: stack vertically */
+    flex-direction: column; /* Vertical stacking on mobile */
+    gap: 20px; /* Gap between sections */
+}
+
+/* Individual Footer Sections */
+.footer-section {
+    text-align: center; /* Center content on mobile */
+}
+
+.footer-section h3, .footer-section h4 {
+    color: #FFD700; /* Gold accent for headings */
+    margin-bottom: 10px; /* Space below headings */
+    font-weight: bold; /* Bold for emphasis */
+}
+
+.footer-section p {
+    margin: 5px 0; /* Small margin for paragraphs */
+}
+
+/* Brand Info Specific */
+.brand-name {
+    font-size: 1.5rem; /* Larger for brand name */
+    text-transform: uppercase; /* Uppercase for premium look */
+}
+
+.tagline {
+    font-style: italic; /* Italic for tagline */
+    opacity: 0.8; /* Subtle opacity */
+}
+
+/* Contact Info Icons */
+.icon {
+    margin-right: 8px; /* Space after icon */
+}
+
+/* Locations Maps Link */
+.maps-link {
+    color: #FFD700; /* Gold color */
+    text-decoration: none; /* No underline */
+    font-weight: bold; /* Bold */
+    transition: opacity 0.3s ease; /* Smooth hover */
+}
+
+.maps-link:hover {
+    opacity: 0.7; /* Subtle hover effect */
+}
+
+/* Follow Us Social Links */
+.social-links {
+    display: flex; /* Flex for horizontal layout */
+    justify-content: center; /* Center on mobile */
+    gap: 10px; /* Gap between links */
+}
+
+.social-link {
+    color: #FFD700; /* Gold text */
+    border: 1px solid #FFD700; /* Gold border */
+    padding: 8px 12px; /* Padding for button feel */
+    text-decoration: none; /* No underline */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover */
+}
+
+.social-link:hover {
+    background-color: #FFD700; /* Gold background on hover */
+    color: #000000; /* Black text on hover */
+}
+
+/* Legal Links */
+.legal-links {
+    display: flex; /* Flex for mobile: stack vertically */
+    flex-direction: column; /* Vertical on mobile */
+    gap: 10px; /* Gap between links */
+    text-align: center; /* Center on mobile */
+    margin-top: 20px; /* Space above */
+}
+
+.legal-links a {
+    color: rgba(255, 255, 255, 0.8); /* White with opacity */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s ease; /* Smooth hover */
+}
+
+.legal-links a:hover {
+    color: #FFD700; /* Gold on hover */
+}
+
+/* Developer Credit */
+.developer-credit {
+    text-align: center; /* Center content */
+    margin-top: 20px; /* Space above */
+}
+
+.separator {
+    border: none; /* Remove default border */
+    height: 1px; /* Thin line */
+    background-color: rgba(255, 215, 0, 0.3); /* Low-opacity gold divider */
+    margin-bottom: 10px; /* Space below */
+}
+
+.developer-link {
+    color: #FFD700; /* Gold for company name */
+    font-weight: bold; /* Bold */
+    text-decoration: none; /* No underline */
+    transition: opacity 0.3s ease; /* Smooth hover */
+}
+
+.developer-link:hover {
+    opacity: 0.7; /* Subtle hover */
+}
+
+/* Desktop Styles - Media Query for Screens 768px and Above */
+@media (min-width: 768px) {
+    .footer {
+        padding: 40px; /* More padding on desktop */
+    }
+
+    .footer-content {
+        display: grid; /* Switch to CSS Grid */
+        grid-template-columns: repeat(4, 1fr); /* 4 columns */
+        gap: 30px; /* Larger gap on desktop */
+    }
+
+    .footer-section {
+        text-align: left; /* Left-align on desktop */
+    }
+
+    .social-links {
+        justify-content: flex-start; /* Left-align social links */
+    }
+
+    .legal-links {
+        flex-direction: row; /* Horizontal on desktop */
+        justify-content: center; /* Center legal links */
+        margin-top: 30px; /* More space */
+    }
+
+    .developer-credit {
+        margin-top: 30px; /* More space */
     }
 }
