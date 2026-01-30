@@ -1,0 +1,177 @@
+/* Menu Page Styles - Mobile-First Approach */
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000; /* Pure black background */
+    color: #ffffff; /* White text */
+    /* font-family: 'Bebas Neue', Arial, sans-serif; Premium font */
+    /* font-family: 'Playfair Display', serif; */
+    font-family: 'Cinzel', serif;
+
+    line-height: 1.6;
+}
+
+/* Menu Header */
+.menu-header {
+    text-align: center; /* Centered title */
+    padding: 20px; /* Padding for mobile */
+    position: sticky; /* Sticky header for better UX */
+    top: 0;
+    background-color: #000000; /* Match body background */
+    z-index: 10;
+}
+
+.menu-title {
+    color: #FFD700; /* Gold color */
+    font-size: 2.5rem; /* Large for mobile */
+    font-weight: bold;
+    position: relative; /* For underline */
+}
+
+.menu-title::after {
+    content: ''; /* Thin gold underline */
+    display: block;
+    width: 50px; /* Short underline */
+    height: 2px;
+    background-color: #FFD700;
+    margin: 10px auto 0; /* Center below title */
+}
+
+/* Menu Content */
+.menu-content {
+    padding: 20px; /* Padding for mobile */
+}
+
+/* Menu Sections */
+.menu-section {
+    margin-bottom: 40px; /* Space between sections */
+    animation: fadeInUp 0.8s ease-out; /* Subtle fade-in animation */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section Headings */
+.section-heading {
+    color: #FFD700; /* Gold color */
+    text-align: center; /* Centered */
+    font-size: 1.8rem; /* Responsive size */
+    text-transform: uppercase; /* Uppercase */
+    letter-spacing: 2px; /* Slight letter spacing */
+    margin-bottom: 10px; /* Space below */
+    position: relative; /* For divider */
+}
+
+.section-heading::after {
+    content: ''; /* Thin gold divider */
+    display: block;
+    width: 100px; /* Longer divider */
+    height: 1px;
+    background-color: #FFD700;
+    margin: 10px auto 0; /* Center below heading */
+}
+
+/* Food Items Container */
+.food-items {
+    margin-top: 20px; /* Space above items */
+}
+
+/* Individual Food Item */
+.food-item {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Name/desc left, price right */
+    align-items: center; /* Vertical center */
+    padding: 15px 0; /* Vertical padding */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Thin low-opacity line */
+}
+
+.food-item:last-child {
+    border-bottom: none; /* No border on last item */
+}
+
+/* Item Details (Name and Description) */
+.item-details {
+    flex: 1; /* Take available space */
+}
+
+.item-name {
+    color: #ffffff; /* White */
+    font-weight: 600; /* Slightly bold */
+    font-size: 1.1rem; /* Standard size */
+    margin-bottom: 5px; /* Space below name */
+}
+
+.item-description {
+    color: rgba(255, 255, 255, 0.8); /* White with opacity */
+    font-size: 0.9rem; /* Smaller font */
+    font-weight: normal;
+}
+
+/* Item Price */
+.item-price {
+    color: #FFD700; /* Gold color */
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-left: 10px; /* Space from details */
+}
+
+/* Desktop Styles - Media Query for Screens 768px and Above */
+@media (min-width: 768px) {
+    .menu-header {
+        padding: 40px; /* More padding on desktop for better spacing */
+    }
+
+    .menu-title {
+        font-size: 3.5rem; /* Larger title for desktop impact */
+    }
+
+    .menu-content {
+        padding: 40px; /* Increased padding for desktop */
+        max-width: 1200px; /* Max width to prevent overly wide content */
+        margin: 0 auto; /* Center the content */
+    }
+
+    .menu-section {
+        margin-bottom: 60px; /* More space between sections on desktop */
+    }
+
+    .section-heading {
+        font-size: 2.2rem; /* Larger heading for desktop */
+        letter-spacing: 3px; /* Slightly more spacing for elegance */
+    }
+
+    .section-heading::after {
+        width: 150px; /* Longer divider on desktop */
+    }
+
+    .food-item {
+        padding: 20px 0; /* More padding for items on desktop */
+    }
+
+    .item-name {
+        font-size: 1.3rem; /* Larger name for readability */
+    }
+
+    .item-description {
+        font-size: 1rem; /* Slightly larger description */
+    }
+
+    .item-price {
+        font-size: 1.3rem; /* Larger price for emphasis */
+        margin-left: 20px; /* More space from details */
+    }
+}

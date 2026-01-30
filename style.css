@@ -26,7 +26,7 @@ body {
     align-items: center;
     padding: 0 20px;
     z-index: 1000;
-    letter-spacing: 6px;
+    letter-spacing: 1.4px;
 }
 
 .hamburger {
@@ -218,6 +218,7 @@ body {
     background-color: #000000; /* Pure black background */
     padding: 20px; /* Padding for mobile spacing */
     color: #ffffff; /* White text for visibility */
+    
 }
 
 /* Heading Styles */
@@ -247,7 +248,7 @@ body {
 /* Image Styles */
 .highlight-image {
     width: 100%; /* Full width on mobile */
-    max-width: 300px; /* Max width to prevent overflow */
+    max-width: 350px; /* Max width to prevent overflow */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Scale image to cover without distortion */
     border-radius: 10px; /* Rounded corners, adapts to screen */
@@ -260,13 +261,14 @@ body {
     margin-top: 10px; /* Space above label */
     padding: 12px 80px; /* Padding inside box */
     background-color: #ffd700; /* Slight transparency */
-    border: 1px solid rgba(0, 0, 0, 0.2); /* Low-opacity border */
+     border: 1px solid rgba(0, 0, 0, 0.2); /*Low-opacity border */
     border-radius: 8px; /* Rounded corners */
     font-size: 1rem; /* Clean typography size */
-    font-family: Arial, sans-serif; /* Clean font */
+    font-family: 'Cinzel', serif; /* Clean font */
     text-align: center; /* Center text */
+    font-size: larger;
     /* color: #000000; */
-    font-weight: 600;        /* 👈 makes text bold (try 700 if needed) */
+    font-weight: 700;        /* 👈 makes text bold (try 700 if needed) */
     color: #000000;          /* 👈 darker than pure black but classy */
     
 }
@@ -347,7 +349,10 @@ body {
 /* Brand Info Specific */
 .brand-name {
     font-size: 1.5rem; /* Larger for brand name */
-    text-transform: uppercase; /* Uppercase for premium look */
+    /* text-transform: uppercase; Uppercase for premium look */
+    text-transform: capitalize;
+    letter-spacing: 1.4px;
+    font-family: 'Bebas Neue', sans-serif; 
 }
 
 .tagline {
@@ -372,6 +377,16 @@ body {
     opacity: 0.7; /* Subtle hover effect */
 }
 
+.footer-section.locations{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+    
+}
+.footer-section.locations a{
+    font-size: small;
+}
 /* Follow Us Social Links */
 .social-links {
     display: flex; /* Flex for horizontal layout */
