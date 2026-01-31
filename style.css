@@ -184,12 +184,16 @@ body {
 /* Main Content */
 .main-content {
     margin: 10px; /* Account for fixed header */
-    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 0px;
     text-align: center;
+    height: 100px;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 5px;
 }
 
 .hero-image {
-    padding-top: 20px;
+    /* padding-top: 20px; */
   width: 100%;
 }
 
@@ -198,7 +202,7 @@ body {
   height: auto;        /* auto height = no crop */
   display: block;
   object-fit: contain; /* ensures full image is visible */
-  padding-top: 35px;
+  /* padding-top: 35px; */
 }
 
 
@@ -224,7 +228,7 @@ body {
 /* Heading Styles */
 .highlights-heading {
     text-align: center; /* Centered horizontally */
-    font-size: 2rem; /* Responsive font size for mobile */
+    font-size: 1.5rem; /* Responsive font size for mobile */
     font-weight: bold; /* Bold for modern look */
     margin-bottom: 20px; /* Space below heading */
     font-family: Arial, sans-serif; /* Clean, modern font */
@@ -249,7 +253,8 @@ body {
 .highlight-image {
     width: 100%; /* Full width on mobile */
     max-width: 350px; /* Max width to prevent overflow */
-    height: auto; /* Maintain aspect ratio */
+    /* height: auto; Maintain aspect ratio */
+    max-height: 370px;
     object-fit: cover; /* Scale image to cover without distortion */
     border-radius: 10px; /* Rounded corners, adapts to screen */
     pointer-events: none; /* Prevent drag, zoom, or interaction */
@@ -480,4 +485,60 @@ body {
     .developer-credit {
         margin-top: 30px; /* More space */
     }
+}
+
+
+
+
+
+
+
+
+/* Floating Menu Button */
+.floating-menu {
+  position: fixed;
+  bottom: 90px; /* little upwards */
+  right: 20px;
+  width: 64px;
+  height: 64px;
+
+  background: #000;
+  border: 2px solid #ffd700;
+  border-radius: 18px; /* curved square */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffd700;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-size: 14px;
+
+  z-index: 9999;
+  cursor: grab;
+  user-select: none;
+
+  /* Animation */
+  animation: pulseGlow 2s infinite;
+}
+
+/* Hover (desktop only) */
+.floating-menu:hover {
+  background: #ffd700;
+  color: #000;
+}
+
+/* Pulse glow animation */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(255, 215, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+  }
 }
