@@ -207,11 +207,11 @@ body {
 
 
 /* Mobile-Only Constraint */
-@media (min-width: 481px) {
+/* @media (min-width: 481px) {
     body {
-        display: none; /* Hide on desktop */
+        display: none; 
     }
-}
+} */
 
 
 
@@ -542,3 +542,138 @@ body {
     box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
   }
 }
+
+
+
+
+
+
+
+
+
+/* ================================
+   DESKTOP VIEW FIX (1024px+)
+================================ */
+@media screen and (min-width: 1024px) {
+
+  body {
+    overflow-x: hidden;
+    background-color: #000;
+  }
+
+  /* Header */
+  .header {
+    padding: 20px 60px;
+  }
+
+  .brand {
+    font-size: 42px;
+    letter-spacing: 2px;
+  }
+
+  .hamburger {
+    font-size: 34px;
+  }
+
+  /* Main text */
+  .main-content {
+    text-align: center;
+    padding: 60px 0;
+  }
+
+  .main-content p {
+    font-size: 28px;
+    letter-spacing: 1.5px;
+  }
+
+  /* Hero Image */
+  .hero-image {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+  }
+
+  .hero-image img {
+    width: 70%;
+    max-width: 900px;
+    border-radius: 12px;
+  }
+
+  /* Highlights */
+  .highlights-section {
+    padding: 80px 60px;
+  }
+
+  .highlights-heading {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .highlight-image {
+    height: 240px;
+    object-fit: cover;
+  }
+
+  .highlight-label {
+    font-size: 18px;
+    padding: 12px 0;
+  }
+
+  /* Floating Menu Button */
+  .floating-menu {
+    bottom: 40px;
+    right: 40px;
+    padding: 16px 28px;
+    font-size: 18px;
+  }
+
+  /* Footer */
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 60px;
+  }
+
+  .footer-section h4 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .footer-section p,
+  .social-link,
+  .maps-link {
+    font-size: 16px;
+  }
+
+  .legal-links {
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 0;
+  }
+
+  .developer-credit p {
+    font-size: 14px;
+  }
+
+  /* Menu (Hamburger slide) */
+  .menu {
+    width: 380px;
+  }
+}
+
+
+
+
+
+
+
+
