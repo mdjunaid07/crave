@@ -677,3 +677,15 @@ body {
 
 
 
+.demo-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: black;
+  color: yellow;
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+  z-index: 9999;
+}
